@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Sagan, Katherine — White Glove Talent Advisor Onboarding</title>
+  <link rel="icon" type="image/png" href="https://saganrecruitment.com/wp-content/uploads/2025/10/Sagan-Favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal:        #093a3e;
+      --teal-deep:   #051f22;
+      --teal-soft:   #0f5258;
+      --cream:       #f3f2ec;
+      --cream-hi:    #fbfaf3;
+      --gold:        #a67714;
+      --gold-bright: #c8941e;
+      --gold-hi:     #e8b32f;
+      --ink:         #0a0e0f;
+      --ink-soft:    rgba(10,14,15,0.78);
+      --ink-mute:    rgba(10,14,15,0.55);
+      --paper:       #ebe9df;
+      --rule:        rgba(10,14,15,0.25);
+      --rule-soft:   rgba(10,14,15,0.12);
+      --display:     'Fraunces', 'Times New Roman', serif;
+      --editorial:   'Instrument Serif', 'Times New Roman', serif;
+      --mono:        'JetBrains Mono', 'Menlo', monospace;
+      --body:        'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: var(--body);
+      font-size: 15.5px;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      font-variant-numeric: tabular-nums;
+      overflow-x: hidden;
+    }
+
+    .page { max-width: 1180px; margin: 0 auto; padding: 28px 44px 60px; }
+
+    /* ── TOP RAIL ── */
+    .top-rail {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 1.5px solid var(--ink);
+      margin-bottom: 36px;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand img { height: 24px; }
+    .brand .sep { width: 1px; height: 18px; background: var(--rule); }
+    .brand .product {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: -0.005em;
+    }
+    .brand .product em {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--teal);
+    }
+    .top-meta {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 56px;
+      align-items: stretch;
+      margin-bottom: 56px;
+    }
+    .h-left { display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .headline {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: clamp(46px, 6.4vw, 102px);
+      line-height: 0.94;
+      letter-spacing: -0.035em;
+      color: var(--ink);
+    }
+    .headline em {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--teal);
+    }
+    .headline .name {
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .lede {
+      max-width: 600px;
+      font-family: var(--editorial);
+      font-style: italic;
+      font-size: clamp(19px, 1.5vw, 24px);
+      line-height: 1.4;
+      color: var(--ink-soft);
+      margin-top: 24px;
+    }
+    .lede strong {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 500;
+      color: var(--teal);
+    }
+
+    /* HERO RIGHT — quote/anchor */
+    .h-right {
+      background: var(--teal-deep);
+      color: var(--cream);
+      padding: 32px 34px 32px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .h-right::before {
+      content: '';
+      position: absolute;
+      top: -20%; right: -20%;
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(232,179,47,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .h-right .label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-hi);
+      position: relative;
+      z-index: 2;
+    }
+    .h-right .anchor-quote {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -0.022em;
+      color: var(--cream);
+      position: relative;
+      z-index: 2;
+    }
+    .h-right .anchor-quote em {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--gold-hi);
+    }
+    .h-right .anchor-byline {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: rgba(243,242,236,0.6);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ── SECTION FRAME ── */
+    section { margin-bottom: 56px; }
+    .sec-head {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      margin-bottom: 26px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .sec-head .num {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 1.6px;
+      color: var(--gold);
+    }
+    .sec-head .title {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 30px;
+      letter-spacing: -0.018em;
+      color: var(--ink);
+    }
+    .sec-head .title em {
+      font-family: var(--editorial);
+      font-style: italic;
+      color: var(--teal);
+    }
+    .sec-head .sub {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-size: 17px;
+      color: var(--ink-mute);
+      margin-left: auto;
+    }
+
+    /* ── AVATAR ── */
+    .avatar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-family: var(--display);
+      font-weight: 600;
+      background: var(--teal);
+      color: var(--cream);
+      border: 1.5px solid var(--gold-bright);
+      text-transform: uppercase;
+      overflow: hidden;
+      flex-shrink: 0;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+    .avatar-lg { width: 56px; height: 56px; font-size: 22px; margin-bottom: 14px; }
+    .avatar-md { width: 44px; height: 44px; font-size: 17px; margin-bottom: 12px; }
+    .avatar-sm { width: 28px; height: 28px; font-size: 12px; }
+
+    .byline-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .byline-row:last-child { margin-bottom: 0; }
+
+    p { margin-bottom: 14px; }
+    p.intro { font-size: 17px; line-height: 1.55; color: var(--ink-soft); max-width: 820px; }
+    p strong { color: var(--ink); font-weight: 600; }
+    p em { font-family: var(--editorial); font-style: italic; color: var(--teal); }
+
+    ul.bullets { list-style: none; margin: 8px 0 16px; padding: 0; }
+    ul.bullets li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+      color: var(--ink-soft);
+    }
+    ul.bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 8px; height: 1.5px;
+      background: var(--gold);
+    }
+    ul.bullets li strong { color: var(--ink); }
+
+    /* ── BUDDIES ── */
+    .buddies {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .buddy-card {
+      background: var(--cream-hi);
+      border: 1px solid var(--rule-soft);
+      border-top: 3px solid var(--teal);
+      padding: 26px 28px;
+    }
+    .buddy-card .role {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .buddy-card .name {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 28px;
+      letter-spacing: -0.018em;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .buddy-card .desc { color: var(--ink-soft); font-size: 14.5px; }
+    .buddy-rule {
+      margin-top: 22px;
+      padding: 18px 22px;
+      background: var(--teal-deep);
+      color: var(--cream);
+      font-family: var(--editorial);
+      font-style: italic;
+      font-size: 17px;
+      line-height: 1.45;
+    }
+    .buddy-rule strong {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 500;
+      color: var(--gold-hi);
+    }
+
+    /* ── MINDSET ── */
+    .mindset {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .mind-card {
+      background: var(--cream-hi);
+      border-left: 3px solid var(--gold);
+      padding: 24px 24px 26px;
+    }
+    .mind-card .num {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 44px;
+      line-height: 1;
+      color: var(--teal);
+      margin-bottom: 12px;
+    }
+    .mind-card .title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.3;
+      letter-spacing: -0.012em;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .mind-card .body { font-size: 14.5px; color: var(--ink-soft); }
+
+    /* ── RAMP TIMELINE ── */
+    .ramp {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .ramp-phase {
+      background: var(--cream-hi);
+      border: 1px solid var(--rule-soft);
+      padding: 22px 22px 24px;
+      position: relative;
+    }
+    .ramp-phase .tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .ramp-phase .phase-title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 19px;
+      letter-spacing: -0.012em;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .ramp-phase ul.bullets li {
+      font-size: 13.5px;
+      margin-bottom: 7px;
+    }
+
+    /* ── BENEFITS GRID ── */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .benefit {
+      padding: 22px 22px;
+      border: 1px solid var(--rule-soft);
+      background: var(--cream-hi);
+    }
+    .benefit .icon {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 36px;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .benefit .b-title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .benefit .b-desc { font-size: 14px; color: var(--ink-soft); }
+
+    /* ── TOOLS TABLE ── */
+    .tools {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+    }
+    .tools th, .tools td {
+      text-align: left;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--rule-soft);
+      vertical-align: top;
+    }
+    .tools th {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1.5px solid var(--ink);
+    }
+    .tools td.tool {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--ink);
+      width: 22%;
+    }
+    .tools td.use { color: var(--ink-soft); }
+
+    /* ── TEAM ── */
+    .team {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .team-card {
+      padding: 20px 22px;
+      background: var(--cream-hi);
+      border-top: 2px solid var(--teal);
+    }
+    .team-card .who {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 17px;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .team-card .role-line {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .team-card .why { font-size: 13.5px; color: var(--ink-soft); }
+
+    .team-subhead {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 36px 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .team-subhead:first-of-type { margin-top: 12px; }
+
+    .new-tag {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--cream);
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      padding: 3px 7px;
+      border-radius: 3px;
+      margin-left: 8px;
+      vertical-align: 2px;
+    }
+
+    /* ── COMPENSATION BOX ── */
+    .comp-box {
+      background: var(--cream-hi);
+      border: 1px solid var(--rule-soft);
+      border-left: 4px solid var(--gold-bright);
+      padding: 26px 30px 28px;
+      margin-top: 22px;
+    }
+    .comp-box .comp-title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 20px;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .comp-box .comp-title em {
+      font-family: var(--editorial);
+      font-style: italic;
+      color: var(--teal);
+    }
+    .comp-box .comp-desc { color: var(--ink-soft); font-size: 15px; margin-bottom: 14px; }
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .comp-table th, .comp-table td {
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .comp-table th {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1.5px solid var(--ink);
+    }
+    .comp-table td:first-child {
+      font-family: var(--display);
+      font-weight: 500;
+      color: var(--ink);
+      width: 40%;
+    }
+    .comp-table td:last-child { color: var(--ink-soft); }
+
+    /* ── GAMEPLAN ── */
+    .gameplan-intro {
+      background: var(--teal-deep);
+      color: var(--cream);
+      padding: 36px 40px 38px;
+      margin-bottom: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+    .gameplan-intro::before {
+      content: '';
+      position: absolute;
+      top: -30%; right: -10%;
+      width: 360px; height: 360px;
+      background: radial-gradient(circle, rgba(232,179,47,0.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .gameplan-intro .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      color: var(--gold-hi);
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 2;
+    }
+    .gameplan-intro h3 {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: clamp(30px, 4vw, 56px);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--cream);
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 2;
+    }
+    .gameplan-intro h3 em {
+      font-family: var(--editorial);
+      font-style: italic;
+      color: var(--gold-hi);
+      font-weight: 400;
+    }
+    .gameplan-intro p {
+      max-width: 760px;
+      color: rgba(243,242,236,0.88);
+      font-size: 16px;
+      line-height: 1.55;
+      position: relative;
+      z-index: 2;
+    }
+    .gameplan-intro p strong {
+      color: var(--cream);
+      font-weight: 600;
+    }
+
+    .shark-list {
+      margin-top: 22px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(232,179,47,0.35);
+      position: relative;
+      z-index: 2;
+    }
+    .shark-list .stitle {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-hi);
+      margin-bottom: 14px;
+    }
+    .shark-list ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 28px;
+      padding: 0;
+    }
+    .shark-list ul li {
+      color: rgba(243,242,236,0.88);
+      font-size: 14.5px;
+      padding-left: 18px;
+      position: relative;
+    }
+    .shark-list ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 8px; height: 1.5px;
+      background: var(--gold-hi);
+    }
+
+    .quarters {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .quarter {
+      background: var(--cream-hi);
+      border: 1px solid var(--rule-soft);
+      padding: 24px 24px 26px;
+      display: flex;
+      flex-direction: column;
+    }
+    .quarter .qtag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .quarter .qtitle {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 19px;
+      letter-spacing: -0.012em;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .quarter .qbody {
+      font-size: 14px;
+      color: var(--ink-soft);
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .quarter .qsuccess {
+      padding-top: 14px;
+      border-top: 1px dashed var(--rule);
+      font-size: 13px;
+      color: var(--teal);
+      font-family: var(--display);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+    .quarter .qsuccess .lbl {
+      display: block;
+      font-family: var(--mono);
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    /* ── CHECKLIST ── */
+    .checklist {
+      background: var(--cream-hi);
+      border: 1px solid var(--rule-soft);
+      padding: 28px 32px 30px;
+    }
+    .checklist ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 36px;
+    }
+    .checklist li {
+      position: relative;
+      padding-left: 32px;
+      color: var(--ink-soft);
+      font-size: 14.5px;
+      line-height: 1.5;
+    }
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 3px;
+      width: 18px;
+      height: 18px;
+      border: 1.5px solid var(--teal);
+      background: var(--cream);
+    }
+
+    /* ── CLOSING ── */
+    .closing {
+      background: var(--teal-deep);
+      color: var(--cream);
+      padding: 44px 48px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .closing::before {
+      content: '';
+      position: absolute;
+      bottom: -30%; left: -10%;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(232,179,47,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .closing .lbl {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      color: var(--gold-hi);
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 2;
+    }
+    .closing h3 {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: clamp(28px, 3.6vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--cream);
+      margin-bottom: 20px;
+      max-width: 820px;
+      position: relative;
+      z-index: 2;
+    }
+    .closing h3 em {
+      font-family: var(--editorial);
+      font-style: italic;
+      color: var(--gold-hi);
+      font-weight: 400;
+    }
+    .closing p {
+      max-width: 760px;
+      font-size: 16px;
+      color: rgba(243,242,236,0.88);
+      line-height: 1.55;
+      position: relative;
+      z-index: 2;
+    }
+    .signature {
+      margin-top: 28px;
+      font-family: var(--editorial);
+      font-style: italic;
+      font-size: 22px;
+      color: var(--gold-hi);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 38px;
+      padding-top: 22px;
+      border-top: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; }
+      .mindset, .ramp, .benefits, .team, .quarters { grid-template-columns: 1fr 1fr; }
+      .buddies { grid-template-columns: 1fr; }
+      .checklist ul { grid-template-columns: 1fr; }
+      .shark-list ul { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .page { padding: 22px 22px 40px; }
+      .mindset, .ramp, .benefits, .team, .quarters { grid-template-columns: 1fr; }
+      .top-rail { flex-wrap: wrap; gap: 12px; }
+      .headline { font-size: clamp(36px, 9vw, 56px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- TOP RAIL -->
+    <div class="top-rail">
+      <div class="brand">
+        <img src="https://saganrecruitment.com/wp-content/uploads/2025/10/Sagan-Logo-Horizontal-Dark.png" alt="Sagan" onerror="this.style.display='none'" />
+        <span class="sep"></span>
+        <span class="product">White Glove Talent Advisor <em>onboarding</em></span>
+      </div>
+      <div class="top-meta">Internal · June 2026</div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="h-left">
+        <div>
+          <div class="eyebrow">Welcome aboard</div>
+          <h1 class="headline">Welcome to Sagan, <span class="name">Katherine.</span></h1>
+          <p class="lede">
+            You're here. Let's go. This page is your starting point. Read it once, bookmark it, and come back when you need it. <strong>Migue and I built it</strong> so you don't have to figure out where things live, who to ask, or what good looks like on your first 90 days on the White Glove team.
+          </p>
+        </div>
+      </div>
+      <div class="h-right">
+        <div class="label">The standard</div>
+        <div class="anchor-quote">
+          White Glove is not a service line. It's a promise: we deliver the hire nobody else <em>can.</em>
+        </div>
+        <div class="anchor-byline">
+          <div class="byline-row"><div class="avatar avatar-sm">M</div><span>Migue, Head of White Glove</span></div>
+          <div class="byline-row"><div class="avatar avatar-sm"><img src="https://avatars.slack-edge.com/2024-11-25/8093571086353_982029390bd17e7fe6ad_original.jpg" alt="Jesus" /></div><span>Jesus, Head of Revenue</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 BUDDIES -->
+    <section>
+      <div class="sec-head">
+        <span class="num">01</span>
+        <h2 class="title">Your <em>buddies</em></h2>
+        <span class="sub">Two people own your onboarding</span>
+      </div>
+      <div class="buddies">
+        <div class="buddy-card">
+          <div class="avatar avatar-lg">M</div>
+          <div class="role">Head of White Glove</div>
+          <div class="name">Migue</div>
+          <p class="desc">Migue just took over as Head of White Glove. He's been running White Glove searches for two years and knows the playbook cold: the intake questions that surface the real requirement, the sourcing paths that beat LinkedIn, how to build a shortlist a hiring manager will actually meet with, how to sell a $300K executive on a role. He's your day-to-day boss and the person who owns your ramp. Every search you touch in the first six months, he's in the loop on. Ask him twice before guessing once.</p>
+        </div>
+        <div class="buddy-card">
+          <div class="avatar avatar-lg"><img src="https://avatars.slack-edge.com/2024-11-25/8093571086353_982029390bd17e7fe6ad_original.jpg" alt="Jesus" /></div>
+          <div class="role">Head of Revenue</div>
+          <div class="name">Jesus</div>
+          <p class="desc">I'm here for the strategic, sales-shaped questions on specific searches. How to read a hiring manager, when to push back on a bad brief, how to defend a rate, how to close a candidate who has three offers, how to grow into the next role on this team. Once you're a few weeks in, we'll do a monthly 30-minute 1:1 just for you and me. Migue owns the operational engine. I own the commercial angle.</p>
+        </div>
+      </div>
+      <div class="buddy-rule">
+        <strong>The rule:</strong> anything about <em>a White Glove search or the playbook</em> goes to Migue. He runs the engine. Anything about <em>the member relationship, pricing, or the commercial arc of a search</em>, comes to me. Both of us would rather you ask twice than guess once.
+      </div>
+    </section>
+
+    <!-- 02 YOUR ROLE -->
+    <section>
+      <div class="sec-head">
+        <span class="num">02</span>
+        <h2 class="title">Your <em>role</em></h2>
+        <span class="sub">White Glove Talent Advisor</span>
+      </div>
+      <p class="intro">You're a <strong>White Glove Talent Advisor</strong>. Sagan runs four revenue lines. White Glove is the premium one. Members pay a percentage of the first-year salary (25% retained, 30%, or 35% success-based) for us to find hires they can't find on their own. The playbook is different from the Passport/Core motion the rest of the recruiting team runs. Fewer searches, more depth, higher stakes.</p>
+      <p class="intro">The job, in one line: <strong>you own the search end-to-end, from kickoff to placement to the 90-day check-in.</strong> The hiring manager is your counterpart. You are their recruiter, not a coordinator handing off to a sourcing team.</p>
+      <p class="intro">Concretely, that means:</p>
+      <ul class="bullets">
+        <li>Running the kickoff call yourself. Coming out with a real profile, not a wish list.</li>
+        <li>Owning the sourcing plan. You lean on the recruiting team when it helps, but the strategy is yours.</li>
+        <li>Screening every candidate before the member sees them. If a bad candidate lands on the shortlist, that's your call, not the sourcer's.</li>
+        <li>Building a shortlist inside 7 to 14 days from kickoff. That's the White Glove promise.</li>
+        <li>Managing the interview process on both sides. Prep, debrief, keep the candidate warm.</li>
+        <li>Handling the offer conversation. Reading resistance. Closing when it's time.</li>
+        <li>Staying in the room 30, 60, 90 days after placement. Replacements happen in this window if they happen.</li>
+        <li>Feeding intel back to the AM team when you spot an expansion signal or a referral opportunity.</li>
+      </ul>
+      <p class="intro">You will not walk in fluent. Nobody does. Migue will run your first two or three searches with you in the seat.</p>
+    </section>
+
+    <!-- 03 MINDSET -->
+    <section>
+      <div class="sec-head">
+        <span class="num">03</span>
+        <h2 class="title">The <em>mindset</em></h2>
+        <span class="sub">Three things that separate White Glove from everything else</span>
+      </div>
+      <p class="intro">Members pay us premium fees because they can't get this hire anywhere else. Every search is a test of whether that's still true.</p>
+      <div class="mindset">
+        <div class="mind-card">
+          <div class="num">01</div>
+          <div class="title">Speed is still the whole game.</div>
+          <div class="body">Retained doesn't mean slow. Seven to fourteen days from kickoff to first shortlist. If you take three weeks, you've already lost the trust the member paid for.</div>
+        </div>
+        <div class="mind-card">
+          <div class="num">02</div>
+          <div class="title">Every shortlist is your reputation.</div>
+          <div class="body">If the member rejects the whole shortlist, that's on you, not the sourcer. Read the brief three times. Screen every candidate. Never send filler to hit a number.</div>
+        </div>
+        <div class="mind-card">
+          <div class="num">03</div>
+          <div class="title">The hiring manager is buying the partnership, not the paperwork.</div>
+          <div class="body">They pay a premium because they get a recruiter who actually thinks. Push back when the brief is wrong. Recommend candidates they wouldn't have shortlisted themselves. Be direct about market rates. That's the product.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 RAMP -->
+    <section>
+      <div class="sec-head">
+        <span class="num">04</span>
+        <h2 class="title">Your <em>ramp</em></h2>
+        <span class="sub">First 90 days, broken into four phases</span>
+      </div>
+      <p class="intro">Don't try to do everything at once. Here's the shape of your first 90 days on White Glove.</p>
+      <div class="ramp">
+        <div class="ramp-phase">
+          <div class="tag">Days 1–14</div>
+          <div class="phase-title">Learn the playbook</div>
+          <ul class="bullets">
+            <li>Shadow Migue on two live kickoffs and two candidate debriefs</li>
+            <li>Read every past White Glove search brief on file</li>
+            <li>Memorize the three pricing options (25% retained, 30%, 35%) cold</li>
+            <li>Get logged in to Airtable, Slack, Front, GPD</li>
+            <li>Sit on one live member offer conversation</li>
+          </ul>
+        </div>
+        <div class="ramp-phase">
+          <div class="tag">Days 15–30</div>
+          <div class="phase-title">Sit in the seat</div>
+          <ul class="bullets">
+            <li>Run your first kickoff call with Migue observing</li>
+            <li>Build the sourcing plan for one live search yourself</li>
+            <li>Screen at least ten candidates in-depth</li>
+            <li>Deliver your first shortlist to a hiring manager</li>
+            <li>Debrief with Migue after every call, every week</li>
+          </ul>
+        </div>
+        <div class="ramp-phase">
+          <div class="tag">Days 31–60</div>
+          <div class="phase-title">Own concurrent searches</div>
+          <ul class="bullets">
+            <li>Two active searches you own, one Migue is shadowing</li>
+            <li>Hit 7 to 14 days from kickoff to shortlist on at least one</li>
+            <li>Handle a candidate offer conversation solo</li>
+            <li>Start monthly 30-min 1:1 with Jesus</li>
+          </ul>
+        </div>
+        <div class="ramp-phase">
+          <div class="tag">Days 61–90</div>
+          <div class="phase-title">Deliver a placement</div>
+          <ul class="bullets">
+            <li>Three active searches at any moment</li>
+            <li>One placement delivered end-to-end, you as primary</li>
+            <li>90-day placement plan handed to the member</li>
+            <li>90-day retrospective with Migue and Jesus</li>
+          </ul>
+        </div>
+      </div>
+      <p class="intro" style="margin-top: 22px;">By day 90, you should feel like you own the searches on your desk, not that you're borrowing them from Migue.</p>
+    </section>
+
+    <!-- 05 BENEFITS -->
+    <section>
+      <div class="sec-head">
+        <span class="num">05</span>
+        <h2 class="title">What the <em>member</em> gets</h2>
+        <span class="sub">The White Glove promise, on one page</span>
+      </div>
+      <p class="intro">When a member signs a White Glove engagement, here's what they're buying. Know it cold by day 30, because members will ask.</p>
+      <div class="benefits">
+        <div class="benefit">
+          <div class="icon">01</div>
+          <div class="b-title">Shortlist in 7 to 14 days</div>
+          <div class="b-desc">From signed kickoff to first shortlist. Faster than any retained search competitor on the market.</div>
+        </div>
+        <div class="benefit">
+          <div class="icon">02</div>
+          <div class="b-title">Fully vetted candidates</div>
+          <div class="b-desc">Every candidate is screened by you before the member sees them. CV, video intro, strengths assessment, recruiter evaluation. Nothing thin gets through.</div>
+        </div>
+        <div class="benefit">
+          <div class="icon">03</div>
+          <div class="b-title">Global talent network</div>
+          <div class="b-desc">30+ countries. LATAM, Africa, Asia, Middle East, Eastern Europe. We reach candidates local firms can't.</div>
+        </div>
+        <div class="benefit">
+          <div class="icon">04</div>
+          <div class="b-title">Executive assessment</div>
+          <div class="b-desc">For senior and technical searches, structured competency assessment plus reference check protocol. Member gets a real dossier, not a resume.</div>
+        </div>
+        <div class="benefit">
+          <div class="icon">05</div>
+          <div class="b-title">90-day placement plan</div>
+          <div class="b-desc">Structured first 90 days for every placement. Reduces early churn, increases satisfaction, protects the fee.</div>
+        </div>
+        <div class="benefit">
+          <div class="icon">06</div>
+          <div class="b-title">Replacement guarantee</div>
+          <div class="b-desc">Defined replacement window on every engagement. If the placement doesn't work, we replace. Explain terms clearly on every kickoff.</div>
+        </div>
+      </div>
+      <p class="intro" style="margin-top: 16px;">Every member should hear all six. If they don't, that's your miss, not theirs.</p>
+    </section>
+
+    <!-- 06 PRICING -->
+    <section>
+      <div class="sec-head">
+        <span class="num">06</span>
+        <h2 class="title">The <em>pricing</em> you can offer</h2>
+        <span class="sub">Three options. No freelancing.</span>
+      </div>
+      <p class="intro">Three pricing options. These are the only three. Do not invent new ones on a call. If a member wants something outside this, escalate to Jesus.</p>
+      <table class="tools">
+        <thead>
+          <tr>
+            <th>Structure</th>
+            <th>How it works</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tool">35% success</td>
+            <td class="use">$500 non-refundable deposit, applied to the success fee. Standard success-based search. Best for members testing the model.</td>
+          </tr>
+          <tr>
+            <td class="tool">30% success</td>
+            <td class="use">$1,000 non-refundable deposit, applied to the success fee. Larger up-front commitment, better rate. Good for members serious about closing.</td>
+          </tr>
+          <tr>
+            <td class="tool">25% retained</td>
+            <td class="use">Paid in full, up front. Best rate. Retained, not success-based. For hard-to-fill senior and executive roles.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="intro" style="margin-top: 18px;">Learn to read which one the member should choose. Retained is the highest-signal option for a serious role. Success is the entry point. The 30% middle option is where most members land after they see one delivery.</p>
+    </section>
+
+    <!-- 07 COMPENSATION -->
+    <section>
+      <div class="sec-head">
+        <span class="num">07</span>
+        <h2 class="title">Your <em>compensation</em></h2>
+        <span class="sub">Base salary plus White Glove bonus pool</span>
+      </div>
+      <p class="intro">White Glove has a shared bonus pool on top of base. It rewards the whole team when the team delivers. Here's how it works.</p>
+
+      <div class="comp-box">
+        <div class="comp-title">The <em>pool</em></div>
+        <p class="comp-desc"><strong>5% of total collected White Glove revenues each month.</strong> Calculated after any affiliate or lead-gen fees. Membership conversions count toward the pool for the full first year at $500/month net. Pool is paid once monthly revenue is reconciled and collections confirmed.</p>
+      </div>
+
+      <div class="comp-box">
+        <div class="comp-title">Your <em>share</em>, month by month</div>
+        <p class="comp-desc">Share allocation vests from your start date. You build up to a full share at month 13. The pool is split proportionally each month by the shares in play across the team.</p>
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Tenure</th>
+              <th>Your share</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Months 1–3</td><td>0 (no share yet)</td></tr>
+            <tr><td>Months 4–6</td><td>0.25 shares</td></tr>
+            <tr><td>Months 7–9</td><td>0.50 shares</td></tr>
+            <tr><td>Months 10–12</td><td>0.75 shares</td></tr>
+            <tr><td>Month 13+</td><td>1.00 full share</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="intro" style="margin-top: 22px;">This structure rewards you for staying, delivering, and building a book of members who keep coming back. Migue is a full share. Guille is on the same vesting ramp you are, just further along. Ask either of them what a real month looks like.</p>
+    </section>
+
+    <!-- 08 TOOLS -->
+    <section>
+      <div class="sec-head">
+        <span class="num">08</span>
+        <h2 class="title">Tools &amp; <em>systems</em></h2>
+        <span class="sub">Daily stack</span>
+      </div>
+      <table class="tools">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>What you do here</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="tool">Airtable</td><td class="use">Search records, candidate pipeline, member profiles. Single source of truth.</td></tr>
+          <tr><td class="tool">Slack</td><td class="use">Internal coordination. Watch #wg-searches, #notify-stripe, and your assigned member channels.</td></tr>
+          <tr><td class="tool">Front</td><td class="use">Email inbox + candidate and member threads. Tag conversations properly.</td></tr>
+          <tr><td class="tool">Google Meet</td><td class="use">Kickoffs, candidate interviews, member alignment. Camera on. Always.</td></tr>
+          <tr><td class="tool">NotebookLM</td><td class="use">Member and candidate context briefs. Use before every call.</td></tr>
+          <tr><td class="tool">Claude</td><td class="use">Drafting, candidate research, market rate calibration, competency question design. Use it as a teammate.</td></tr>
+          <tr><td class="tool">GPD</td><td class="use">Payroll for placements once they start.</td></tr>
+          <tr><td class="tool">Stripe</td><td class="use">Deposit invoicing and fee collection.</td></tr>
+        </tbody>
+      </table>
+      <p class="intro" style="margin-top: 18px;">Migue will walk you through the White Glove-specific views in Airtable in week one. Don't try to figure them out cold.</p>
+    </section>
+
+    <!-- 09 TEAM -->
+    <section>
+      <div class="sec-head">
+        <span class="num">09</span>
+        <h2 class="title">Your <em>team</em></h2>
+        <span class="sub">White Glove + close collaborators</span>
+      </div>
+
+      <p class="intro">You're on a three-person team. Small, tight, high-signal. Migue leads. Guille has been running searches for a few months and knows the ropes. You're the third seat. Lean on both. Watch how they do intake calls. Ask why they made a specific candidate call. The team is small enough that every conversation is a chance to learn.</p>
+
+      <div class="team-subhead">Your direct team — White Glove</div>
+      <div class="team">
+        <div class="team-card">
+          <div class="avatar avatar-md">M</div>
+          <div class="who">Migue</div>
+          <div class="role-line">Head of White Glove · Argentina</div>
+          <div class="why">Your boss and mentor. Runs the playbook. Ask him first, always.</div>
+        </div>
+        <div class="team-card">
+          <div class="avatar avatar-md">G</div>
+          <div class="who">Guille</div>
+          <div class="role-line">Talent Advisor · Argentina</div>
+          <div class="why">Your peer. Joined December 2025. He's been through the ramp you're about to run. Compare notes.</div>
+        </div>
+        <div class="team-card">
+          <div class="avatar avatar-md">K</div>
+          <div class="who">Katherine<span class="new-tag">You</span></div>
+          <div class="role-line">Talent Advisor · New hire</div>
+          <div class="why">The third seat on White Glove. Your first 90 days are on this page.</div>
+        </div>
+      </div>
+
+      <div class="team-subhead">Close collaborators</div>
+      <p class="intro">Sagan is small enough that everyone will know your name by month two. These are the people you'll work with most outside White Glove.</p>
+
+      <div class="team">
+        <div class="team-card">
+          <div class="avatar avatar-md"><img src="https://avatars.slack-edge.com/2024-11-27/8078516204567_f6b75d6daa6b315c4e10_original.jpg" alt="Anna" /></div>
+          <div class="who">Anna</div>
+          <div class="role-line">Head of Operations &amp; Account Management</div>
+          <div class="why">Anna runs Sagan's operational engine. Anything about how the company works, how members are onboarded, or where a document lives, she has the answer.</div>
+        </div>
+        <div class="team-card">
+          <div class="avatar avatar-md"><img src="https://avatars.slack-edge.com/2024-11-26/8088239055811_04272c6727d8e20ca1c4_original.jpg" alt="Sof" /></div>
+          <div class="who">Sof + Recruiting</div>
+          <div class="role-line">Head of Recruiting · Pod leads + 15 TAs</div>
+          <div class="why">Sof runs the Passport/Core recruiting team. When a White Glove search needs additional sourcing muscle, this is who you tap. Coordinate through Migue at first.</div>
+        </div>
+        <div class="team-card">
+          <div class="avatar avatar-md"><img src="https://avatars.slack-edge.com/2026-03-02/10614191762450_0f32af4902933f184672_original.png" alt="Khris" /></div>
+          <div class="who">Khris</div>
+          <div class="role-line">Bookkeeper</div>
+          <div class="why">Deposit invoicing and fee collection go through him. Loop him in when a search closes.</div>
+        </div>
+        <div class="team-card">
+          <div class="avatar avatar-md"><img src="https://avatars.slack-edge.com/2025-06-11/9036223188914_1ac9eb0b6a95e735fb8e_original.jpg" alt="Sara" /></div>
+          <div class="who">Sara</div>
+          <div class="role-line">AI Agents</div>
+          <div class="why">If a White Glove search opens up an AI agent opportunity for the member, Sara is your entry point.</div>
+        </div>
+        <div class="team-card">
+          <div class="avatar avatar-md"><img src="https://avatars.slack-edge.com/2024-11-26/8101526658545_0d51f04419a53e9722a5_original.jpg" alt="Manuela" /></div>
+          <div class="who">Manuela + AM Team</div>
+          <div class="role-line">Account Managers · LATAM</div>
+          <div class="why">Every member has an AM. When you deliver a placement, loop the AM in. When you spot an expansion signal on a call, tell the AM. They own the long-term relationship.</div>
+        </div>
+        <div class="team-card">
+          <div class="avatar avatar-md"><img src="https://avatars.slack-edge.com/2024-11-25/8093571086353_982029390bd17e7fe6ad_original.jpg" alt="Jesus" /></div>
+          <div class="who">Jesus</div>
+          <div class="role-line">Head of Revenue</div>
+          <div class="why">I close new White Glove business and set direction on pricing and pipeline. When a search is stuck commercially, escalate.</div>
+        </div>
+      </div>
+
+      <p class="intro" style="margin-top: 22px;">Migue will do introductions in your first week. Treat every intro like a relationship to maintain. The team is small enough that knowing everyone matters.</p>
+    </section>
+
+    <!-- 10 GAMEPLAN -->
+    <section>
+      <div class="sec-head">
+        <span class="num">10</span>
+        <h2 class="title">The <em>12-month gameplan</em></h2>
+        <span class="sub">From new TA to full share, running your own book</span>
+      </div>
+
+      <div class="gameplan-intro">
+        <div class="label">The path</div>
+        <h3>To get there, you need to become the recruiter members <em>ask for by name.</em></h3>
+        <p>Katherine, the goal is not to just close reqs. The goal is that six months from now, a hiring manager finishes an interview with a candidate you sourced and says <strong>"who else is Katherine running for us?"</strong> That's what a White Glove Talent Advisor really is. Not a middleman. A partner the member trusts more than their internal team.</p>
+
+        <div class="shark-list">
+          <div class="stitle">The best White Glove Talent Advisors do this</div>
+          <ul>
+            <li>Read a brief and know what the member isn't saying</li>
+            <li>Deliver a shortlist that beats the member's own network</li>
+            <li>Push back on a bad requirement instead of nodding along</li>
+            <li>Close a candidate who has three competing offers</li>
+            <li>Know market rates cold. Never quote from memory. Always from data.</li>
+            <li>Stay in the room 30, 60, 90 days after the placement lands</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="quarters">
+        <div class="quarter">
+          <div class="qtag">Q1 · Months 1–3</div>
+          <div class="qtitle">Learn the playbook</div>
+          <div class="qbody">Shadow Migue on live searches. Own one search from kickoff to shortlist by end of month 2. Deliver your first placement by end of month 3. Memorize pricing, benefits, and the replacement policy. By end of Q1 you should be able to run a kickoff call solo without a script.</div>
+          <div class="qsuccess">
+            <span class="lbl">Success looks like</span>
+            1 placement delivered. 2 to 3 concurrent searches. Zero shortlist rejections you couldn't defend.
+          </div>
+        </div>
+        <div class="quarter">
+          <div class="qtag">Q2 · Months 4–6</div>
+          <div class="qtitle">Build the muscle</div>
+          <div class="qbody">Run 3 to 4 concurrent searches. Deliver 2 to 3 placements this quarter. Start handling candidate offer conversations solo. Hit the 7 to 14 day shortlist window consistently. Your first 0.25 share of the bonus pool kicks in month 4.</div>
+          <div class="qsuccess">
+            <span class="lbl">Success looks like</span>
+            2 to 3 placements closed. Time-to-shortlist under 14 days. Bonus pool share vesting on schedule.
+          </div>
+        </div>
+        <div class="quarter">
+          <div class="qtag">Q3 · Months 7–9</div>
+          <div class="qtitle">Run your own book</div>
+          <div class="qbody">4 to 5 concurrent searches, all yours. Migue reviews, doesn't co-pilot. You handle escalations directly with the member. First repeat search from a member you placed for shows up. Share ramps to 0.50.</div>
+          <div class="qsuccess">
+            <span class="lbl">Success looks like</span>
+            4+ placements in quarter. 1 repeat member. Members asking for you by name.
+          </div>
+        </div>
+        <div class="quarter">
+          <div class="qtag">Q4 · Months 10–12</div>
+          <div class="qtitle">Full seat</div>
+          <div class="qbody">Running a full book independently. Concurrent load of 5 to 6 active searches. Bringing in your own repeat business through member referrals and second-search asks. Share ramps to 0.75, then full share at month 13. You're a peer to Guille, not a junior.</div>
+          <div class="qsuccess">
+            <span class="lbl">Success looks like</span>
+            Consistent monthly placements. 2 to 3 members treating you as their primary recruiter. Full share on the pool from month 13.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 CHECKLIST -->
+    <section>
+      <div class="sec-head">
+        <span class="num">11</span>
+        <h2 class="title">First <em>week</em> checklist</h2>
+        <span class="sub">Print it. Tick it off.</span>
+      </div>
+      <div class="checklist">
+        <ul>
+          <li>Slack handle live, joined #wg-searches and #notify-stripe</li>
+          <li>Airtable access granted for the White Glove base</li>
+          <li>Front email inbox configured with search threads</li>
+          <li>Google Cal synced with Migue's and Jesus's calendars</li>
+          <li>Recurring weekly 1:1 with Migue on the books</li>
+          <li>First monthly 30-min 1:1 with Jesus on the books</li>
+          <li>Read every past White Glove search brief on file</li>
+          <li>Shadow Migue on two live kickoff calls</li>
+          <li>Shadow Migue on two candidate debrief calls</li>
+          <li>Meet Guille for a coffee (virtual) in week one</li>
+          <li>Meet Anna, Sof, Khris, Sara (Migue sets these up)</li>
+          <li>NotebookLM project created for candidate and member prep</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section>
+      <div class="closing">
+        <div class="lbl">One last thing</div>
+        <h3>Don't wait to act like you belong. <em>You do.</em></h3>
+        <p>Migue and I picked you for a reason, and the reason wasn't just credentials. We picked you because we think you can run a full book by month twelve. The gameplan above is a roadmap, not a ceiling. If you deliver faster than Q2, we'll re-cut the milestones. If you need a beat longer to settle, that's fine too. What we don't tolerate: passive. We'll give you everything we have. The only thing we're asking back is that you swim.</p>
+        <div class="signature">Let's go. — Jesus &amp; Migue</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>Sagan · Internal onboarding · White Glove Talent Advisor</div>
+      <div>Prepared June 2026 · Migue &amp; Jesus</div>
+    </footer>
+
+  </div>
+</body>
+</html>
